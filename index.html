@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maskanul Huda An-nur</title>
+  <title>Pondok Pesantren Tahfidzul Qur'an Maskanul Huda An-Nur</title>
 
-  <!-- Font mirip website asli -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --forest:#0d3526;
-      --jade:#156b4a;
       --gold:#c9943a;
       --gold-light:#e8bb6a;
     }
@@ -22,7 +21,7 @@
       height:100%;
       overflow:hidden;
       font-family:'Cormorant Garamond', serif;
-      background:#0d3526;
+      background:var(--forest);
     }
 
     .loading{
@@ -40,7 +39,7 @@
         linear-gradient(160deg,#071a10 0%,#0a2a1a 45%,#0d3526 100%);
     }
 
-    /* pattern islami samar */
+    /* Ornamen Islami */
     .loading::before{
       content:'';
       position:absolute;
@@ -59,14 +58,6 @@
       text-shadow:0 2px 10px rgba(0,0,0,.35);
     }
 
-    .indo{
-      margin-top:10px;
-      font-size:18px;
-      letter-spacing:.08em;
-      color:rgba(255,255,255,.78);
-      position:relative;
-    }
-
     .ornament{
       color:var(--gold);
       font-size:20px;
@@ -75,10 +66,30 @@
       position:relative;
     }
 
+    .indo{
+      position:relative;
+      font-size:18px;
+      letter-spacing:.05em;
+      color:rgba(255,255,255,.82);
+      line-height:1.7;
+      max-width:700px;
+      padding:0 20px;
+    }
+
     iframe{
       width:100%;
       height:100%;
       border:none;
+    }
+
+    @media(max-width:768px){
+      .arab{
+        font-size:32px;
+      }
+
+      .indo{
+        font-size:15px;
+      }
     }
   </style>
 </head>
@@ -87,7 +98,7 @@
 <div class="loading" id="loading">
 
   <div class="arab">
-    جزاكم الله خيرًا
+    Jazakumullahu Khairan Katsiran
   </div>
 
   <div class="ornament">
@@ -95,13 +106,14 @@
   </div>
 
   <div class="indo">
-    Terima kasih atas kunjungan Anda<br>
-    di Website Maskanul Huda An-nur
+    atas kunjungan Anda di Website<br>
+    Pondok Pesantren Tahfidzul Qur'an<br>
+    Maskanul Huda An-Nur
   </div>
 
 </div>
 
-<iframe
+<iframe 
   src="https://script.google.com/macros/s/AKfycbzVd5pyUv5AIgRbi1CqewA6XENFdu3WUFD-aRgjsG_5NG7czKSaANU4--6A4GzzLN4EyQ/exec"
   allow="camera; microphone; geolocation"
   onload="document.getElementById('loading').style.display='none'">
