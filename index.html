@@ -1,149 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pondok Pesantren Tahfidzul Qur'an Maskanul Huda An-Nur</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Pondok Pesantren Tahfidzul Qur'an Maskanul Huda An-Nur</title>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  <style>
-    :root{
-      --forest:#0d3526;
-      --gold:#c9943a;
-      --gold-light:#e8bb6a;
-    }
+html, body {
+  width:100%; height:100%;
+  overflow:hidden;
+  background:#0d3526;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
 
-    html,body{
-      margin:0;
-      width:100%;
-      height:100%;
-      overflow:hidden;
-      font-family:'Cormorant Garamond', serif;
-      background:var(--forest);
-    }
+.loading {
+  position:fixed; inset:0; z-index:999;
+  display:flex; align-items:center; justify-content:center;
+  background:#0d3526;
+}
 
-    .loading{
-      position:fixed;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      text-align:center;
-      z-index:10;
+.content { text-align:center; padding:2rem; }
 
-      background:
-        radial-gradient(circle at top right, rgba(201,148,58,.15), transparent 30%),
-        linear-gradient(160deg,#071a10 0%,#0a2a1a 45%,#0d3526 100%);
-    }
+.logo {
+  width:80px; height:80px;
+  border-radius:50%;
+  border:1.5px solid rgba(201,148,58,0.5);
+  object-fit:contain;
+  margin-bottom:1.5rem;
+}
 
-    /* Ornamen Islami */
-    .loading::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      opacity:.08;
-      background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23c9943a' stroke-width='1'%3E%3Ccircle cx='40' cy='40' r='28'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3C/g%3E%3C/svg%3E");
-    }
+.eyebrow {
+  font-size:11px;
+  letter-spacing:3px;
+  color:rgba(201,148,58,0.7);
+  text-transform:uppercase;
+  margin-bottom:0.5rem;
+}
 
-    /* Logo */
-    .logo{
-      width:110px;
-      height:110px;
-      object-fit:contain;
-      margin-bottom:22px;
-      position:relative;
-      border-radius:50%;
-      border:2px solid rgba(201,148,58,.45);
-      box-shadow:0 0 25px rgba(201,148,58,.25);
-      background:rgba(255,255,255,.04);
-      padding:10px;
-    }
+.title {
+  font-size:22px;
+  font-weight:500;
+  color:#fff;
+  line-height:1.5;
+  margin-bottom:0.5rem;
+}
 
-    .arab{
-      font-family:'Amiri', serif;
-      font-size:42px;
-      color:var(--gold-light);
-      line-height:1.7;
-      position:relative;
-      text-shadow:0 2px 10px rgba(0,0,0,.35);
-    }
+.arabic {
+  font-family:'Scheherazade New', serif;
+  font-size:22px;
+  color:rgba(201,148,58,0.9);
+  line-height:2;
+  margin-bottom:1.5rem;
+}
 
-    .ornament{
-      color:var(--gold);
-      font-size:20px;
-      margin:14px 0;
-      opacity:.8;
-      position:relative;
-    }
+.subtitle {
+  font-size:13px;
+  color:rgba(255,255,255,0.45);
+  line-height:1.8;
+}
 
-    .indo{
-      position:relative;
-      font-size:18px;
-      letter-spacing:.05em;
-      color:rgba(255,255,255,.82);
-      line-height:1.7;
-      max-width:700px;
-      padding:0 20px;
-    }
+.loading-text {
+  font-size:12px;
+  color:rgba(201,148,58,0.6);
+  margin-top:2rem;
+  letter-spacing:1px;
+  animation:pulse 1.5s ease-in-out infinite;
+}
 
-    iframe{
-      width:100%;
-      height:100%;
-      border:none;
-    }
+@keyframes pulse {
+  0%, 100% { opacity:0.4; }
+  50% { opacity:1; }
+}
 
-    @media(max-width:768px){
-      .logo{
-        width:90px;
-        height:90px;
-      }
-
-      .arab{
-        font-size:32px;
-      }
-
-      .indo{
-        font-size:15px;
-      }
-    }
-  </style>
+iframe {
+  width:100%; height:100%;
+  border:none;
+  transform-origin:top left;
+}
+</style>
 </head>
 <body>
 
 <div class="loading" id="loading">
-
-  <!-- Logo Pondok -->
-  <img 
-    src="https://lh3.googleusercontent.com/d/1fn5FDmQNhpsewoQNtpUv2TmgQ9yiSN3X"
-    alt="Logo Pondok"
-    class="logo"
-  >
-
-  <div class="arab">
-    Jazakumullahu Khairan Katsiran
+  <div class="content">
+    <img src="https://lh3.googleusercontent.com/d/1fn5FDmQNhpsewoQNtpUv2TmgQ9yiSN3X" class="logo" alt="Logo">
+    <p class="eyebrow">Pondok Pesantren Tahfidzul Qur'an</p>
+    <h1 class="title">Maskanul Huda An-Nur</h1>
+    <p class="arabic">مَسْكَنُ الْهُدَى وَالنُّور</p>
+    <p class="subtitle">Official Website</p>
+    <p class="loading-text">Memuat halaman...</p>
   </div>
-
-  <div class="ornament">
-    ✦ ━━━ ✦
-  </div>
-
-  <div class="indo">
-    Terima kasih atas kunjungan Anda di Official Website<br>
-    Pondok Pesantren Tahfidzul Qur'an<br>
-    Maskanul Huda An-Nur
-  </div>
-
 </div>
 
-<iframe 
-  src="https://script.google.com/macros/s/AKfycbzt5PIM_G2ghZeJGbQua3zLoccV3lS4lu1llZi5xnc1YNNSoGHM1hLiaSGhm0eqKfjq/exec"
+<iframe
+  id="mainFrame"
+  src="https://script.google.com/macros/s/AKfycbzant9qLwwJCNNA0SGaYeys3d6iXJje7RrtNlzEN99-fJvPVnTdm44i4PCIpfyMLOiJHQ/exec"
   allow="camera; microphone; geolocation"
   onload="document.getElementById('loading').style.display='none'">
 </iframe>
+
+<script>
+try {
+  var iframe = document.getElementById('mainFrame');
+  iframe.addEventListener('load', function() {
+    try {
+      var iframeDoc = this.contentDocument || this.contentWindow.document;
+      var meta = iframeDoc.querySelector('meta[name="viewport"]');
+      if (!meta) {
+        meta = iframeDoc.createElement('meta');
+        meta.name = 'viewport';
+        iframeDoc.head.appendChild(meta);
+      }
+      meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    } catch(e) {}
+  });
+} catch(e) {}
+</script>
 
 </body>
 </html>
